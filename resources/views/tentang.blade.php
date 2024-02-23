@@ -19,4 +19,7 @@
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
 
+
+    <a href="/pegawai">DATA PEGAWAI</a>
+
 @endsection

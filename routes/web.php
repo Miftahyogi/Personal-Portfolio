@@ -20,11 +20,32 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//Route Pegawai
+// Route::get('/datapegawai', [PegawaiController::class, 'datapegawai'])->name('datapegawai');
+
+
 
 //route blog
+Route::get('/master', [BlogController::class, 'master'])->name('master');
+
+Route::get('/blog', function () {
+    return view('blog', [
+        "name" => "nurhadi aldo",
+        "profesi" => "capres idolamu"
+    ]);
+});
+
+
+
+Route::get('/master', [BlogController::class, 'master'])->name('master');
 Route::get('/blog', [BlogController::class, 'blog'])->name('home');
-Route::get('/blog/tentang', [BlogController::class, 'tentang'])->name('tentang');
-Route::get('/blog/kontak', [BlogController::class, 'kontak'])->name('kontak');
+Route::get('/tentang', [BlogController::class, 'tentang'])->name('tentang');
+Route::get('/kontak', [BlogController::class, 'kontak'])->name('kontak');
+Route::get('/header', [BlogController::class, 'header'])->name('header');
 
 //route pegawai
-Route::get('/pegawai', [PegawaiController::class, 'index'])->name('home');
+Route::get('/pegawai', [PegawaiController::class, 'pegawai'])->name('pegawai');
+Route::get('/pegawai/tambah', [PegawaiController::class, 'tambah'])->name('tambah');
+Route::get('/pegawai/edit/{id}', [PegawaiController::class, 'edit'])->name('edit');
+Route::post('/pegawai/store', [PegawaiController::class, 'store'])->name('store');
+Route::post('/pegawai/update', [PegawaiController::class, 'update'])->name('update');
