@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\AbsenController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\PegawaiController;
 use Illuminate\Support\Facades\Route;
 
@@ -49,3 +51,25 @@ Route::get('/pegawai/tambah', [PegawaiController::class, 'tambah'])->name('tamba
 Route::get('/pegawai/edit/{id}', [PegawaiController::class, 'edit'])->name('edit');
 Route::post('/pegawai/store', [PegawaiController::class, 'store'])->name('store');
 Route::post('/pegawai/update', [PegawaiController::class, 'update'])->name('update');
+Route::get('/pegawai/hapus/{id}', [PegawaiController::class, 'hapus'])->name('hapus');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Route::get('/mahasiswa', [MahasiswaController::class, 'mahasiswa'])->name('mahasiswa');
+Route::get('/tambahmahasiswa', [MahasiswaController::class, 'tambah_mahasiswa'])->name('tambahMahasiswa');
+Route::get('/mahasiswa/editmahasiswa{{ mahasiswa_id }}', [MahasiswaController::class, 'edit'])->name('editdatamahasiswa');
+Route::post('/mahasiswa/update', [MahasiswaController::class, 'update_mahasiswa'])->name('update');

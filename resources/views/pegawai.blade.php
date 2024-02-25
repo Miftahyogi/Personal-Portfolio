@@ -13,7 +13,7 @@
     <h2>www.malasngoding.com</h2>
     <h3>Data Pegawai</h3>
 
-    <a href="/pegawai/tambah"> + Tambah Pegawai Baru</a>
+    <a href="/pegawai/tambah">Tambah Pegawai Baru</a>
 
     <br />
     <br />
