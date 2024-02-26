@@ -10,11 +10,21 @@
 
 <body>
     <h2>Edit Data Mahasiswa</h2>
-    <form action="/mahasiswa/update" method="post"></form>
-    @csrf
-    @foreach($mahasiswa as $m) @endforeach
-    input:<input type="hidden" name="id"> {{ $m->mahasiswa_id }} <br>
-    Name <input type="text" required="required" name="nama" id="">
+
+    @foreach ($mahasiswa as $m)
+        <form action="/mahasiswa/update" method="post">
+            {{ csrf_field() }}
+            <input type="hidden" name="id" value="{{ $m->mahasiswa_id }}"> <br>
+            Nama: <input type="text" required="required" name="nama" value="{{ $m->mahasiswa_nama }}"> <br>
+            Semester: <input type="text" required="required" name="semester" value="{{ $m->mahasiswa_semester }}">
+            <br>
+            Jurusan: <input type="text" required="required" name="jurusan" value="{{ $m->mahasiswa_jurusan }}"><br>
+            Alamat:
+            <textarea name="alamat" id="" cols="30" rows="10"></textarea><br>
+            <input type="submit" value="Simpan Data">
+        </form>
+    @endforeach
+
 
 </body>
 

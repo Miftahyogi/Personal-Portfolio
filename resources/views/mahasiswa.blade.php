@@ -29,12 +29,11 @@
                 <td> {{ $m->mahasiswa_jurusan }} </td>
                 <td> {{ $m->mahasiswa_alamat }} </td>
                 <td>
-                    <a href="/mahasiswa/editmahasiswa{{ $m->mahasiswa_id }}">Edit</a>
+                    <a href="/mahasiswa/editmahasiswa/{{ $m->mahasiswa_id }}">Edit</a>
                     |
-                    <a href="/mahasiswa/hapusmahasiswa{{ $m->mahasiswa_id }}">Hapus</a>
+                    <a href="/mahasiswa/hapusmahasiswa/{{ $m->mahasiswa_id }}">Hapus</a>
                 </td>
-            </tr>
-
+                </tr>
         @endforeach
     </table>
 
