@@ -7,11 +7,17 @@ use Illuminate\Support\Facades\DB;
 
 class MahasiswaController extends Controller
 {
-    public function mahasiswa()
+    public function datamahasiswa()
     {
         $mahasiswa = DB::table('absen_mahasiswa')->get();
         // dd($mahasiswa);
-        return view('mahasiswa', ['mahasiswa' => $mahasiswa]);
+        return view('datamahasiswa', ['mahasiswa' => $mahasiswa]);
+    }
+
+    public function index()
+    {
+        $mahasiswa = DB::table(('absen_mahasiswa'))->paginate(10);
+        return view('index', ['mahasiswa' => $mahasiswa]);
     }
 
     public function tambah_mahasiswa()
@@ -34,6 +40,6 @@ class MahasiswaController extends Controller
             'mahasiswa_jurusan' => $request->jurusan,
             'mahasiswa_alamat' => $request->alamat
         ]);
-        return redirect('/mahasiswa');
+        return redirect('/datamahasiswa');
     }
 }

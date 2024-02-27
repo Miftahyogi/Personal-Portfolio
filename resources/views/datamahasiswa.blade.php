@@ -9,9 +9,11 @@
 </head>
 
 <body>
-    <h2>Absen Mahasiswa</h2>
+    <h2>Data Mahasiswa</h2>
     <br><br>
 
+    <a href="/mahasiswa">Halaman Mahasiswa</a>
+    <br>
     <table border="1">
         <tr>
             <td>Id :</td>

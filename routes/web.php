@@ -54,7 +54,8 @@ Route::post('/pegawai/update', [PegawaiController::class, 'update'])->name('upda
 Route::get('/pegawai/hapus/{id}', [PegawaiController::class, 'hapus'])->name('hapus');
 
 //Route Mahasiswa
-Route::get('/mahasiswa', [MahasiswaController::class, 'mahasiswa'])->name('mahasiswa');
+Route::get('/mahasiswa', [MahasiswaController::class, 'index'])->name('index');
+Route::get('/datamahasiswa', [MahasiswaController::class, 'datamahasiswa'])->name('datamahasiswa');
 Route::get('/tambahmahasiswa', [MahasiswaController::class, 'tambah_mahasiswa'])->name('tambahMahasiswa');
 Route::get('/mahasiswa/editmahasiswa/{id}', [MahasiswaController::class, 'edit'])->name('editdatamahasiswa');
 Route::post('/mahasiswa/update', [MahasiswaController::class, 'update_mahasiswa'])->name('update');
