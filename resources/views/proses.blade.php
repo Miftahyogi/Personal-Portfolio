@@ -18,11 +18,17 @@
 
                     <table class="table table-bordered table-striped">
                         <tr>
-                            <td style="widht:150px">Nama</td>
-                            <td> {{ $data->('nama') }} </td>
+                            <td style="widht:150px">Nama : </td>
+                            <td> {{ $request->nama }} </td>
                         </tr>
-
+                        <td>Pekerjaan : </td>
+                        <td> {{ $request->pekerjaan }} </td>
+                        </tr>
+                        <td>Umur : </td>
+                        <td> {{ $request->umur }} </td>
+                        </tr>
                     </table>
+                    <a href="/input" class="btn btn-primary">Kembali</a>
                 </div>
             </div>
         </div>

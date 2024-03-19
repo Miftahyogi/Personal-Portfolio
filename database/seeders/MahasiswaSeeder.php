@@ -17,7 +17,7 @@ class MahasiswaSeeder extends Seeder
     {
         $faker = Faker::Create('id_ID'); //Indonesia
 
-        for ($i = 0; $i <= 50; $i++) {
+        for ($i = 0; $i <= 60; $i++) {
             DB::table('absen_mahasiswa')->insert([
                 'mahasiswa_nama' => $faker->name,
                 'mahasiswa_semester' => $faker->numberBetween(4, 8),
